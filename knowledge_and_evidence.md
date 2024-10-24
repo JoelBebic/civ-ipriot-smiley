@@ -93,7 +93,7 @@ Address the following tasks and questions based on the code provided in this rep
 3. Run the project locally by executing the `main.py` file
 4. Evidence this by providing screenshots of the project directory structure and the output of the `main.py` file
 
-![Local Execution (INSERT YOUR SCREENSHOT)](screenshots/CREATE_A_SCREENSHOT_OF_YOUR_local_setup.png)
+![Local Execution (INSERT YOUR SCREENSHOT)](screenshot/Smiley%20sc.png)
 
 If you are running on a Raspberry Pi, you can use the following command to run the project and then screenshot the result:
 
@@ -108,58 +108,61 @@ python3 main.py
 
 1. Examine the code for the `smiley.py` file and provide  an example of a variable of each of the following types and their corresponding values (`_` should be replaced with the appropriate values):
 
-   | Type                    | name       | value          |
-   | ----------              | ---------- | -------------- |
-   | built-in primitive type | _          |  _             |
-   | built-in composite type | _          |  _             |
-   | user-defined type       | _          |  _             |
+   | Type                    | name   | value |
+   | ----------              |--------|-------|
+   | built-in primitive type | Int    | 15    |
+   | built-in composite type | Tuples | 5     |
+   | user-defined type       | class  | 1     |
 
 2. Fill in (`_`) the following table based on the code in `smiley.py`:
 
-   | Object                   | Type                    |
-   | ------------             | ----------------------- |
-   | self.pixels              | _                       |
-   | A member of self.pixels  | _                       |
-   | self                     | _                       |
+   | Object                   | Type   |
+   | ------------             |--------|
+   | self.pixels              | list   |
+   | A member of self.pixels  | tuple  |
+   | self                     | smiley |
 
 3. Examine the code for `smiley.py`, `sad.py`, and `happy.py`. Give an example of each of the following control structures using an example from **each** of these files. Include the first line and the line range:
 
-   | Control Flow | File       | First line  | Line range  |
-   | ------------ | ---------- | ----------- | ----------- |
-   |  sequence    |  _         | _           | _           |
-   |  selection   | _          | _           | _           |
-   |  iteration   | _          | _           | _           |
+   | Control Flow | File      | First line | Line range |
+   | ------------ |-----------|------------|------------|
+   |  sequence    | smiley.py | 1          | 39         |
+   |  selection   | sad.py    | 19         | 30         |
+   |  iteration   | happy.py  | 16         | 22         |
 
 4. Though everything in Python is an object, it is sometimes said to have four "primitive" types. Examining the three files `smiley.py`, `sad.py`, and `happy.py`, identify which of the following types are used in any of these files, and give an example of each (use an example from the code, if applicable, otherwise provide an example of your own):
 
-   | Type                    | Used? | Example |
-   | ----------------------- | ----- | --------|
-   | int                     | _     | _          |
-   | float                   | _     | _          |
-   | str                     | _     | _          |
-   | bool                    | _     | _          |
+   | Type                    | Used?     | Example                                     |
+   | ----------------------- |-----------|---------------------------------------------|
+   | int                     | smiley.py | 225 and 0                                   |
+   | float                   | happy.py  | delay=0.25                                  |
+   | str                     | sad.py    | """Draws open or closed eyes on a smiley""" |
+   | bool                    | smiley.py | dimmed=True                                 |
 
 5. Examining `smiley.py`, provide an example of a class variable and an instance variable (attribute). Explain **why** one is defined as a class variable and the other as an instance variable.
 
-> Your answer here
+> example of instance variable is "blink_delay" and an example of a class variable is "class Smiley". The "blink delay" is defined as a instance variable which is a variable within a class which allows for unique variable which in this case allows for unique blink timers. The class variable Smiley is defined as a class variable because it allows for this class to be set to only "smiley"
 >
 
 6. Examine `happy.py`, and identify the constructor (initializer) for the `Happy` class:
    1. What is the purpose of a constructor (in general) and this one (in particular)?
 
-   > Your answer here
+   > 
    >
 
    2. What statement(s) does it execute (consider the `super` call), and what is the result?
 
-   > Your answer here
+   > The statements it executes are super().__init__():, self.draw_mouth() and self.draw_eyes(). 
+   > The super statement calls for the parent classes smiley and blinkable which then takes their attributes and performs any setup defined in those classes,
+   > The self.draw_mouth statement draws the mouth of the face 
+   > and lastly the self.draw_eyes() draws the eyes of the face.
    >
 
 ### Code style
 
 1. What code style is used in the code? Is it likely to be the same as the code style used in the SenseHat? Give to reasons as to why/why not:
    
-> Your answer here
+> The code style that is used is PEP 8. Sense_hat.py uses this PEP 8 coding style as it follows the same indentation and spaces as Smiley.py
 >
 
 2. List three aspects of this convention you see applied in the code.
